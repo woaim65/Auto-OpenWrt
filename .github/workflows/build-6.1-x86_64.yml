@@ -62,10 +62,6 @@ jobs:
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
       
-    - name: aliyundrive-webdav
-      run: |
-        cd openwrt/package 
-        git clone https://github.com/messense/aliyundrive-webdav.git
        
     - name: Load custom feeds
       run: |
