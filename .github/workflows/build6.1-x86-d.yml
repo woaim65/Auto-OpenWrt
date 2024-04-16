@@ -1,4 +1,4 @@
-name: X86_64 OpenWrt
+name: X86_64-D OpenWrt
 
 on:
   repository_dispatch:
@@ -7,7 +7,7 @@ on:
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
-  CONFIG_FILE: x86_64.config
+  CONFIG_FILE: x86_d.config
   DIY_SCRIPT: diy-part1.sh
   DIY_SCRIPT2: diy-6.6-part2.sh
   CLASH_KERNEL: amd64
