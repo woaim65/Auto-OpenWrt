@@ -9,7 +9,6 @@ env:
   REPO_BRANCH: master
   CONFIG_FILE: x86-d.config
   DIY_SCRIPT: diy-part1.sh
-  DIY_2SCRIPT: diy-6.6-part2.sh
   CLASH_KERNEL: amd64
   CACHE_TOOLCHAIN: true
   UPLOAD_BIN_DIR: false
@@ -102,9 +101,7 @@ jobs:
         chmod +x $DIY_SCRIPT
         cd $OPENWRT_PATH
         $GITHUB_WORKSPACE/$DIY_SCRIPT
-        chmod +x $DIY_2SCRIPT
-        cd $OPENWRT_PATH
-        $GITHUB_WORKSPACE/$DIY_2SCRIPT
+      
     
     - name: Install Feeds
       run: |
