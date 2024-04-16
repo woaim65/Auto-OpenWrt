@@ -102,7 +102,10 @@ jobs:
         chmod +x $DIY_SCRIPT
         cd $OPENWRT_PATH
         $GITHUB_WORKSPACE/$DIY_SCRIPT
-      
+        chmod +x $DIY_2SCRIPT
+        cd $OPENWRT_PATH
+        $GITHUB_WORKSPACE/$DIY_2SCRIPT
+    
     - name: Install Feeds
       run: |
         cd $OPENWRT_PATH
@@ -113,10 +116,7 @@ jobs:
       run: |
         [ -e files ] && mv files $OPENWRT_PATH/files 
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE $OPENWRT_PATH/.config
-        chmod +x $DIY_2SCRIPT
-        cd $OPENWRT_PATH
-        $GITHUB_WORKSPACE/$DIY_2SCRIPT
-    
+       
     - name: Download DL Package
       run: |
         cd $OPENWRT_PATH
