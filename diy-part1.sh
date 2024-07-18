@@ -14,7 +14,7 @@
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
 # Add a feed source
-
+git clone -b lede https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
 echo 'src-git helloworld https://github.com/fw876/helloworld.git;master' >>feeds.conf.default
 echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.default
 #echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.default
