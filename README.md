@@ -1,4 +1,4 @@
-# 云编译 OpenWrt 固件
+# 云编译 OpenWrt 固件/新增imm固件（区别nftables，若干插件不兼容）
 
 **项目说明**：
 - 本项目使用 Github Actions 下载 [Lean](https://github.com/coolsnowwolf/lede) 的 `Openwrt` 源码仓库，进行云编译。
@@ -9,7 +9,7 @@
 
 **特色插件**：
 
-  - [x] 添加科学上网插件 passwall
+  - [x] 添加科学上网插件 passwall-smartdns
   - [x] 添加本地DNS服务器插件 smartdns
   
 **集成插件**：（**打勾项**默认**编译**入固件、**未打勾项**默认**不编译**入固件）
