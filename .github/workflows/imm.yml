@@ -101,7 +101,10 @@ jobs:
     - name: Install Feeds
       run: |
         cd $OPENWRT_PATH
-        ./scripts/feeds update -a
+        for i in 1 2 3; do
+          ./scripts/feeds update -a && break || echo "Retry $i..."
+          sleep 5
+        done
         ./scripts/feeds install -a
         
     - name: Load custom configuration
