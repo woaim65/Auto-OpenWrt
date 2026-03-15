@@ -125,7 +125,7 @@ jobs:
       run: |
         cd $OPENWRT_PATH
         echo -e "Using 2 threads to compile (reduce memory usage)"
-        make -j2 V=s 2>&1 | tee /tmp/compile.log
+        make -j1 V=sc 2>&1 | tee /tmp/compile.log 2>&1 | tee /tmp/compile.log
         EXIT_CODE=${PIPESTATUS[0]}
         if [ $EXIT_CODE -ne 0 ]; then
           echo "Compile failed, checking log..."
